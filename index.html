@@ -88,6 +88,12 @@
   .lk { font-family:var(--mono); font-size:11.5px; letter-spacing:.03em; color:var(--accent); text-decoration:underline; text-underline-offset:2px; }
   .lk:hover { color:var(--text); }
 
+  .vmodal { display:none; position:fixed; inset:0; z-index:50; background:rgba(0,0,0,.88); backdrop-filter:blur(6px); align-items:center; justify-content:center; padding:18px; padding-top:calc(18px + env(safe-area-inset-top)); }
+  .vbox { width:100%; max-width:680px; }
+  .vbox video { width:100%; border-radius:12px; background:#000; display:block; }
+  .vclose { display:block; margin:0 0 10px auto; background:none; border:1px solid var(--line); color:var(--text); font-family:var(--mono); font-size:11.5px; letter-spacing:.1em; text-transform:uppercase; padding:8px 13px; border-radius:8px; }
+  .vfb { display:none; margin:14px auto 0; text-align:center; font-family:var(--mono); font-size:12.5px; color:var(--accent); text-decoration:underline; text-underline-offset:3px; }
+
   .contingency .day-head { border-top:1px solid var(--line); padding-top:26px; }
 
   footer { margin-top:44px; padding-top:18px; border-top:1px solid var(--line2); }
@@ -157,8 +163,7 @@
           <div class="ex-data"><b>4 × 8–10</b> &nbsp;·&nbsp; 2–3s ecc &nbsp;·&nbsp; 120s rest</div>
           <p class="ex-note">Your priority lift — sets the upper-chest shelf.</p>
           <div class="ex-links">
-            <a class="lk" href="https://www.google.com/search?tbm=isch&q=incline+dumbbell+press+form" target="_blank" rel="noopener">view form ↗</a>
-            <a class="lk" href="https://www.youtube.com/results?search_query=incline+dumbbell+press+tutorial" target="_blank" rel="noopener">watch video ↗</a>
+            <a class="lk" href="https://www.youtube.com/results?search_query=incline+dumbbell+press+tutorial" onclick="playVid('incline-dumbbell-press.mp4','https://www.youtube.com/results?search_query=incline+dumbbell+press+tutorial');return false;">▶ Bench + Dumbbells</a>
           </div>
         </div>
       </article>
@@ -171,8 +176,7 @@
           <div class="ex-data"><b>3 × 8–12</b> &nbsp;·&nbsp; 2–3s ecc &nbsp;·&nbsp; 90s rest</div>
           
           <div class="ex-links">
-            <a class="lk" href="https://www.google.com/search?tbm=isch&q=machine+chest+press+form" target="_blank" rel="noopener">view form ↗</a>
-            <a class="lk" href="https://www.youtube.com/results?search_query=machine+chest+press+tutorial" target="_blank" rel="noopener">watch video ↗</a>
+            <a class="lk" href="https://www.youtube.com/results?search_query=Technogym+Chest+Press+tutorial" onclick="playVid('chest-press.mp4','https://www.youtube.com/results?search_query=Technogym+Chest+Press+tutorial');return false;">▶ Chest Press</a>
           </div>
         </div>
       </article>
@@ -185,8 +189,7 @@
           <div class="ex-data"><b>3 × 8–12</b> &nbsp;·&nbsp; 2–3s ecc &nbsp;·&nbsp; 120s rest</div>
           
           <div class="ex-links">
-            <a class="lk" href="https://www.google.com/search?tbm=isch&q=seated+dumbbell+shoulder+press+form" target="_blank" rel="noopener">view form ↗</a>
-            <a class="lk" href="https://www.youtube.com/results?search_query=seated+dumbbell+shoulder+press+tutorial" target="_blank" rel="noopener">watch video ↗</a>
+            <a class="lk" href="https://www.youtube.com/results?search_query=seated+dumbbell+shoulder+press+tutorial" onclick="playVid('shoulder-press.mp4','https://www.youtube.com/results?search_query=seated+dumbbell+shoulder+press+tutorial');return false;">▶ Dumbbells + Bench</a>
           </div>
         </div>
       </article>
@@ -199,8 +202,7 @@
           <div class="ex-data"><b>4 × 12–15</b> &nbsp;·&nbsp; 2–3s ecc &nbsp;·&nbsp; 90s rest</div>
           <p class="ex-note">Width-builder. This is what frames the V-taper.</p>
           <div class="ex-links">
-            <a class="lk" href="https://www.google.com/search?tbm=isch&q=cable+lateral+raise+form" target="_blank" rel="noopener">view form ↗</a>
-            <a class="lk" href="https://www.youtube.com/results?search_query=cable+lateral+raise+tutorial" target="_blank" rel="noopener">watch video ↗</a>
+            <a class="lk" href="https://www.youtube.com/results?search_query=cable+lateral+raise+tutorial" onclick="playVid('lateral-raise.mp4','https://www.youtube.com/results?search_query=cable+lateral+raise+tutorial');return false;">▶ Pulley</a>
           </div>
         </div>
       </article>
@@ -213,8 +215,7 @@
           <div class="ex-data"><b>3 × 12–15</b> &nbsp;·&nbsp; 2–3s ecc &nbsp;·&nbsp; 90s rest</div>
           
           <div class="ex-links">
-            <a class="lk" href="https://www.google.com/search?tbm=isch&q=cable+chest+fly+form" target="_blank" rel="noopener">view form ↗</a>
-            <a class="lk" href="https://www.youtube.com/results?search_query=cable+chest+fly+tutorial" target="_blank" rel="noopener">watch video ↗</a>
+            <a class="lk" href="https://www.youtube.com/results?search_query=cable+chest+fly+tutorial" onclick="playVid('chest-fly.mp4','https://www.youtube.com/results?search_query=cable+chest+fly+tutorial');return false;">▶ Pulley</a>
           </div>
         </div>
       </article>
@@ -227,8 +228,7 @@
           <div class="ex-data"><b>3 × 10–12</b> &nbsp;·&nbsp; 2–3s ecc &nbsp;·&nbsp; 90s rest</div>
           
           <div class="ex-links">
-            <a class="lk" href="https://www.google.com/search?tbm=isch&q=rope+tricep+pushdown+form" target="_blank" rel="noopener">view form ↗</a>
-            <a class="lk" href="https://www.youtube.com/results?search_query=rope+tricep+pushdown+tutorial" target="_blank" rel="noopener">watch video ↗</a>
+            <a class="lk" href="https://www.youtube.com/results?search_query=rope+tricep+pushdown+tutorial" onclick="playVid('triceps-pushdown.mp4','https://www.youtube.com/results?search_query=rope+tricep+pushdown+tutorial');return false;">▶ Pulley</a>
           </div>
         </div>
       </article>
@@ -241,8 +241,7 @@
           <div class="ex-data"><b>3 × 10–12</b> &nbsp;·&nbsp; 2–3s ecc &nbsp;·&nbsp; 90s rest</div>
           
           <div class="ex-links">
-            <a class="lk" href="https://www.google.com/search?tbm=isch&q=overhead+cable+tricep+extension+form" target="_blank" rel="noopener">view form ↗</a>
-            <a class="lk" href="https://www.youtube.com/results?search_query=overhead+cable+tricep+extension+tutorial" target="_blank" rel="noopener">watch video ↗</a>
+            <a class="lk" href="https://www.youtube.com/results?search_query=overhead+cable+tricep+extension+tutorial" onclick="playVid('overhead-triceps-extension.mp4','https://www.youtube.com/results?search_query=overhead+cable+tricep+extension+tutorial');return false;">▶ Pulley</a>
           </div>
         </div>
       </article>
@@ -277,8 +276,7 @@
           <div class="ex-data"><b>4 × 8–12</b> &nbsp;·&nbsp; 2–3s ecc &nbsp;·&nbsp; 120s rest</div>
           <p class="ex-note">Builds the taper from the top down.</p>
           <div class="ex-links">
-            <a class="lk" href="https://www.google.com/search?tbm=isch&q=wide+grip+lat+pulldown+form" target="_blank" rel="noopener">view form ↗</a>
-            <a class="lk" href="https://www.youtube.com/results?search_query=wide+grip+lat+pulldown+tutorial" target="_blank" rel="noopener">watch video ↗</a>
+            <a class="lk" href="https://www.youtube.com/results?search_query=Technogym+Vertical+Traction+tutorial" onclick="playVid('lat-pulldown.mp4','https://www.youtube.com/results?search_query=Technogym+Vertical+Traction+tutorial');return false;">▶ Vertical Traction</a>
           </div>
         </div>
       </article>
@@ -291,8 +289,7 @@
           <div class="ex-data"><b>3 × 8–12</b> &nbsp;·&nbsp; 2–3s ecc &nbsp;·&nbsp; 120s rest</div>
           
           <div class="ex-links">
-            <a class="lk" href="https://www.google.com/search?tbm=isch&q=seated+cable+row+form" target="_blank" rel="noopener">view form ↗</a>
-            <a class="lk" href="https://www.youtube.com/results?search_query=seated+cable+row+tutorial" target="_blank" rel="noopener">watch video ↗</a>
+            <a class="lk" href="https://www.youtube.com/results?search_query=Technogym+Low+Row+tutorial" onclick="playVid('seated-row.mp4','https://www.youtube.com/results?search_query=Technogym+Low+Row+tutorial');return false;">▶ Low Row</a>
           </div>
         </div>
       </article>
@@ -305,8 +302,7 @@
           <div class="ex-data"><b>3 × 10–12</b> &nbsp;·&nbsp; 2–3s ecc &nbsp;·&nbsp; 90s rest</div>
           
           <div class="ex-links">
-            <a class="lk" href="https://www.google.com/search?tbm=isch&q=chest+supported+machine+row+form" target="_blank" rel="noopener">view form ↗</a>
-            <a class="lk" href="https://www.youtube.com/results?search_query=chest+supported+machine+row+tutorial" target="_blank" rel="noopener">watch video ↗</a>
+            <a class="lk" href="https://www.youtube.com/results?search_query=Technogym+Low+Row+tutorial" onclick="playVid('chest-supported-row.mp4','https://www.youtube.com/results?search_query=Technogym+Low+Row+tutorial');return false;">▶ Low Row</a>
           </div>
         </div>
       </article>
@@ -319,8 +315,7 @@
           <div class="ex-data"><b>3 × 15–20</b> &nbsp;·&nbsp; 2–3s ecc &nbsp;·&nbsp; 90s rest</div>
           <p class="ex-note">Posture + 3D shoulders. Light, controlled, high reps.</p>
           <div class="ex-links">
-            <a class="lk" href="https://www.google.com/search?tbm=isch&q=face+pull+form" target="_blank" rel="noopener">view form ↗</a>
-            <a class="lk" href="https://www.youtube.com/results?search_query=face+pull+tutorial" target="_blank" rel="noopener">watch video ↗</a>
+            <a class="lk" href="https://www.youtube.com/results?search_query=face+pull+cable+tutorial" onclick="playVid('face-pull.mp4','https://www.youtube.com/results?search_query=face+pull+cable+tutorial');return false;">▶ Pulley</a>
           </div>
         </div>
       </article>
@@ -333,8 +328,7 @@
           <div class="ex-data"><b>3 × 12–15</b> &nbsp;·&nbsp; 2–3s ecc &nbsp;·&nbsp; 90s rest</div>
           
           <div class="ex-links">
-            <a class="lk" href="https://www.google.com/search?tbm=isch&q=reverse+pec+deck+form" target="_blank" rel="noopener">view form ↗</a>
-            <a class="lk" href="https://www.youtube.com/results?search_query=reverse+pec+deck+tutorial" target="_blank" rel="noopener">watch video ↗</a>
+            <a class="lk" href="https://www.youtube.com/results?search_query=Technogym+Reverse+Fly+tutorial" onclick="playVid('reverse-fly.mp4','https://www.youtube.com/results?search_query=Technogym+Reverse+Fly+tutorial');return false;">▶ Reverse Fly</a>
           </div>
         </div>
       </article>
@@ -347,8 +341,7 @@
           <div class="ex-data"><b>3 × 8–12</b> &nbsp;·&nbsp; 2–3s ecc &nbsp;·&nbsp; 90s rest</div>
           
           <div class="ex-links">
-            <a class="lk" href="https://www.google.com/search?tbm=isch&q=dumbbell+bicep+curl+form" target="_blank" rel="noopener">view form ↗</a>
-            <a class="lk" href="https://www.youtube.com/results?search_query=dumbbell+bicep+curl+tutorial" target="_blank" rel="noopener">watch video ↗</a>
+            <a class="lk" href="https://www.youtube.com/results?search_query=dumbbell+bicep+curl+tutorial" onclick="playVid('biceps-curl.mp4','https://www.youtube.com/results?search_query=dumbbell+bicep+curl+tutorial');return false;">▶ Dumbbells</a>
           </div>
         </div>
       </article>
@@ -361,8 +354,7 @@
           <div class="ex-data"><b>3 × 10–12</b> &nbsp;·&nbsp; 2–3s ecc &nbsp;·&nbsp; 90s rest</div>
           
           <div class="ex-links">
-            <a class="lk" href="https://www.google.com/search?tbm=isch&q=cable+bicep+curl+form" target="_blank" rel="noopener">view form ↗</a>
-            <a class="lk" href="https://www.youtube.com/results?search_query=cable+bicep+curl+tutorial" target="_blank" rel="noopener">watch video ↗</a>
+            <a class="lk" href="https://www.youtube.com/results?search_query=cable+bicep+curl+tutorial" onclick="playVid('cable-curl.mp4','https://www.youtube.com/results?search_query=cable+bicep+curl+tutorial');return false;">▶ Pulley</a>
           </div>
         </div>
       </article>
@@ -398,8 +390,7 @@
           <div class="ex-data"><b>4 × 10–12</b> &nbsp;·&nbsp; 2–3s ecc &nbsp;·&nbsp; 120s rest</div>
           <p class="ex-note">Feet high &amp; wide shifts load off the knee onto glutes &amp; hams.</p>
           <div class="ex-links">
-            <a class="lk" href="https://www.google.com/search?tbm=isch&q=high+wide+stance+leg+press+form" target="_blank" rel="noopener">view form ↗</a>
-            <a class="lk" href="https://www.youtube.com/results?search_query=high+wide+stance+leg+press+tutorial" target="_blank" rel="noopener">watch video ↗</a>
+            <a class="lk" href="https://www.youtube.com/results?search_query=Technogym+Leg+Press+tutorial" onclick="playVid('leg-press.mp4','https://www.youtube.com/results?search_query=Technogym+Leg+Press+tutorial');return false;">▶ Leg Press</a>
           </div>
         </div>
       </article>
@@ -412,8 +403,7 @@
           <div class="ex-data"><b>3 × 8–12</b> &nbsp;·&nbsp; 2–3s ecc &nbsp;·&nbsp; 120s rest</div>
           <p class="ex-note">Hinge at the hips, soft knees, feel the hamstring stretch.</p>
           <div class="ex-links">
-            <a class="lk" href="https://www.google.com/search?tbm=isch&q=romanian+deadlift+form" target="_blank" rel="noopener">view form ↗</a>
-            <a class="lk" href="https://www.youtube.com/results?search_query=romanian+deadlift+tutorial" target="_blank" rel="noopener">watch video ↗</a>
+            <a class="lk" href="https://www.youtube.com/results?search_query=romanian+deadlift+tutorial" onclick="playVid('rdl.mp4','https://www.youtube.com/results?search_query=romanian+deadlift+tutorial');return false;">▶ Barbell</a>
           </div>
         </div>
       </article>
@@ -426,8 +416,7 @@
           <div class="ex-data"><b>4 × 10–15</b> &nbsp;·&nbsp; 2–3s ecc &nbsp;·&nbsp; 90s rest</div>
           
           <div class="ex-links">
-            <a class="lk" href="https://www.google.com/search?tbm=isch&q=seated+leg+curl+form" target="_blank" rel="noopener">view form ↗</a>
-            <a class="lk" href="https://www.youtube.com/results?search_query=seated+leg+curl+tutorial" target="_blank" rel="noopener">watch video ↗</a>
+            <a class="lk" href="https://www.youtube.com/results?search_query=Technogym+Leg+Curl+tutorial" onclick="playVid('leg-curl.mp4','https://www.youtube.com/results?search_query=Technogym+Leg+Curl+tutorial');return false;">▶ Leg Curl</a>
           </div>
         </div>
       </article>
@@ -440,8 +429,7 @@
           <div class="ex-data"><b>3 × 10–12</b> &nbsp;·&nbsp; 2–3s ecc &nbsp;·&nbsp; 90s rest</div>
           
           <div class="ex-links">
-            <a class="lk" href="https://www.google.com/search?tbm=isch&q=barbell+hip+thrust+form" target="_blank" rel="noopener">view form ↗</a>
-            <a class="lk" href="https://www.youtube.com/results?search_query=barbell+hip+thrust+tutorial" target="_blank" rel="noopener">watch video ↗</a>
+            <a class="lk" href="https://www.youtube.com/results?search_query=barbell+hip+thrust+tutorial" onclick="playVid('hip-thrust.mp4','https://www.youtube.com/results?search_query=barbell+hip+thrust+tutorial');return false;">▶ Barbell + Bench</a>
           </div>
         </div>
       </article>
@@ -454,8 +442,7 @@
           <div class="ex-data"><b>3 × 12–15</b> &nbsp;·&nbsp; 2–3s ecc &nbsp;·&nbsp; 90s rest</div>
           <p class="ex-note">Slow and controlled, no swinging. Ease off if knees complain.</p>
           <div class="ex-links">
-            <a class="lk" href="https://www.google.com/search?tbm=isch&q=leg+extension+form" target="_blank" rel="noopener">view form ↗</a>
-            <a class="lk" href="https://www.youtube.com/results?search_query=leg+extension+tutorial" target="_blank" rel="noopener">watch video ↗</a>
+            <a class="lk" href="https://www.youtube.com/results?search_query=Technogym+Leg+Extension+tutorial" onclick="playVid('leg-extension.mp4','https://www.youtube.com/results?search_query=Technogym+Leg+Extension+tutorial');return false;">▶ Leg Extension</a>
           </div>
         </div>
       </article>
@@ -468,8 +455,7 @@
           <div class="ex-data"><b>4 × 12–20</b> &nbsp;·&nbsp; 2–3s ecc &nbsp;·&nbsp; 60s rest</div>
           
           <div class="ex-links">
-            <a class="lk" href="https://www.google.com/search?tbm=isch&q=seated+calf+raise+form" target="_blank" rel="noopener">view form ↗</a>
-            <a class="lk" href="https://www.youtube.com/results?search_query=seated+calf+raise+tutorial" target="_blank" rel="noopener">watch video ↗</a>
+            <a class="lk" href="https://www.youtube.com/results?search_query=Technogym+Rotary+Calf+tutorial" onclick="playVid('calf-raise.mp4','https://www.youtube.com/results?search_query=Technogym+Rotary+Calf+tutorial');return false;">▶ Rotary Calf</a>
           </div>
         </div>
       </article>
@@ -504,8 +490,7 @@
           <div class="ex-data"><b>4 × 8–10</b> &nbsp;·&nbsp; 2–3s ecc &nbsp;·&nbsp; 120s rest</div>
           <p class="ex-note">Second weekly hit on the upper chest — your signature.</p>
           <div class="ex-links">
-            <a class="lk" href="https://www.google.com/search?tbm=isch&q=incline+barbell+bench+press+form" target="_blank" rel="noopener">view form ↗</a>
-            <a class="lk" href="https://www.youtube.com/results?search_query=incline+barbell+bench+press+tutorial" target="_blank" rel="noopener">watch video ↗</a>
+            <a class="lk" href="https://www.youtube.com/results?search_query=incline+smith+machine+press+tutorial" onclick="playVid('incline-smith-press.mp4','https://www.youtube.com/results?search_query=incline+smith+machine+press+tutorial');return false;">▶ Multipower (Smith)</a>
           </div>
         </div>
       </article>
@@ -518,8 +503,7 @@
           <div class="ex-data"><b>3 × 12–15</b> &nbsp;·&nbsp; 2–3s ecc &nbsp;·&nbsp; 90s rest</div>
           <p class="ex-note">Drive the handles up to eye-line for the upper fibers.</p>
           <div class="ex-links">
-            <a class="lk" href="https://www.google.com/search?tbm=isch&q=low+to+high+cable+fly+form" target="_blank" rel="noopener">view form ↗</a>
-            <a class="lk" href="https://www.youtube.com/results?search_query=low+to+high+cable+fly+tutorial" target="_blank" rel="noopener">watch video ↗</a>
+            <a class="lk" href="https://www.youtube.com/results?search_query=low+to+high+cable+fly+tutorial" onclick="playVid('low-high-cable-fly.mp4','https://www.youtube.com/results?search_query=low+to+high+cable+fly+tutorial');return false;">▶ Pulley</a>
           </div>
         </div>
       </article>
@@ -532,8 +516,7 @@
           <div class="ex-data"><b>4 × 8–12</b> &nbsp;·&nbsp; 2–3s ecc &nbsp;·&nbsp; 90s rest</div>
           <p class="ex-note">Arms behind the body = maximum biceps stretch &amp; length.</p>
           <div class="ex-links">
-            <a class="lk" href="https://www.google.com/search?tbm=isch&q=incline+dumbbell+curl+form" target="_blank" rel="noopener">view form ↗</a>
-            <a class="lk" href="https://www.youtube.com/results?search_query=incline+dumbbell+curl+tutorial" target="_blank" rel="noopener">watch video ↗</a>
+            <a class="lk" href="https://www.youtube.com/results?search_query=incline+dumbbell+curl+tutorial" onclick="playVid('incline-dumbbell-curl.mp4','https://www.youtube.com/results?search_query=incline+dumbbell+curl+tutorial');return false;">▶ Dumbbells</a>
           </div>
         </div>
       </article>
@@ -546,8 +529,7 @@
           <div class="ex-data"><b>3 × 10–12</b> &nbsp;·&nbsp; 2–3s ecc &nbsp;·&nbsp; 90s rest</div>
           
           <div class="ex-links">
-            <a class="lk" href="https://www.google.com/search?tbm=isch&q=preacher+curl+form" target="_blank" rel="noopener">view form ↗</a>
-            <a class="lk" href="https://www.youtube.com/results?search_query=preacher+curl+tutorial" target="_blank" rel="noopener">watch video ↗</a>
+            <a class="lk" href="https://www.youtube.com/results?search_query=Technogym+Arm+Curl+tutorial" onclick="playVid('preacher-curl.mp4','https://www.youtube.com/results?search_query=Technogym+Arm+Curl+tutorial');return false;">▶ Arm Curl</a>
           </div>
         </div>
       </article>
@@ -560,8 +542,7 @@
           <div class="ex-data"><b>3 × 10–12</b> &nbsp;·&nbsp; 2–3s ecc &nbsp;·&nbsp; 90s rest</div>
           <p class="ex-note">Adds thickness that makes the arm look bigger from every angle.</p>
           <div class="ex-links">
-            <a class="lk" href="https://www.google.com/search?tbm=isch&q=hammer+curl+form" target="_blank" rel="noopener">view form ↗</a>
-            <a class="lk" href="https://www.youtube.com/results?search_query=hammer+curl+tutorial" target="_blank" rel="noopener">watch video ↗</a>
+            <a class="lk" href="https://www.youtube.com/results?search_query=hammer+curl+tutorial" onclick="playVid('hammer-curl.mp4','https://www.youtube.com/results?search_query=hammer+curl+tutorial');return false;">▶ Dumbbells</a>
           </div>
         </div>
       </article>
@@ -574,8 +555,7 @@
           <div class="ex-data"><b>3 × 12–15</b> &nbsp;·&nbsp; 2–3s ecc &nbsp;·&nbsp; 90s rest</div>
           <p class="ex-note">More width to frame the whole physique.</p>
           <div class="ex-links">
-            <a class="lk" href="https://www.google.com/search?tbm=isch&q=cable+lateral+raise+form" target="_blank" rel="noopener">view form ↗</a>
-            <a class="lk" href="https://www.youtube.com/results?search_query=cable+lateral+raise+tutorial" target="_blank" rel="noopener">watch video ↗</a>
+            <a class="lk" href="https://www.youtube.com/results?search_query=cable+lateral+raise+tutorial" onclick="playVid('lateral-raise.mp4','https://www.youtube.com/results?search_query=cable+lateral+raise+tutorial');return false;">▶ Pulley</a>
           </div>
         </div>
       </article>
@@ -609,8 +589,7 @@
           <div class="ex-data"><b>3 × 8–12</b> &nbsp;·&nbsp; 2–3s ecc &nbsp;·&nbsp; 90s rest</div>
           
           <div class="ex-links">
-            <a class="lk" href="https://www.google.com/search?tbm=isch&q=lat+pulldown+form" target="_blank" rel="noopener">view form ↗</a>
-            <a class="lk" href="https://www.youtube.com/results?search_query=lat+pulldown+tutorial" target="_blank" rel="noopener">watch video ↗</a>
+            <a class="lk" href="https://www.youtube.com/results?search_query=Technogym+Vertical+Traction+tutorial" onclick="playVid('lat-pulldown.mp4','https://www.youtube.com/results?search_query=Technogym+Vertical+Traction+tutorial');return false;">▶ Vertical Traction</a>
           </div>
         </div>
       </article>
@@ -623,8 +602,7 @@
           <div class="ex-data"><b>3 × 8–12</b> &nbsp;·&nbsp; 2–3s ecc &nbsp;·&nbsp; 90s rest</div>
           
           <div class="ex-links">
-            <a class="lk" href="https://www.google.com/search?tbm=isch&q=incline+dumbbell+press+form" target="_blank" rel="noopener">view form ↗</a>
-            <a class="lk" href="https://www.youtube.com/results?search_query=incline+dumbbell+press+tutorial" target="_blank" rel="noopener">watch video ↗</a>
+            <a class="lk" href="https://www.youtube.com/results?search_query=incline+dumbbell+press+tutorial" onclick="playVid('incline-dumbbell-press.mp4','https://www.youtube.com/results?search_query=incline+dumbbell+press+tutorial');return false;">▶ Bench + Dumbbells</a>
           </div>
         </div>
       </article>
@@ -637,8 +615,7 @@
           <div class="ex-data"><b>3 × 10–12</b> &nbsp;·&nbsp; 2–3s ecc &nbsp;·&nbsp; 90s rest</div>
           
           <div class="ex-links">
-            <a class="lk" href="https://www.google.com/search?tbm=isch&q=leg+press+form" target="_blank" rel="noopener">view form ↗</a>
-            <a class="lk" href="https://www.youtube.com/results?search_query=leg+press+tutorial" target="_blank" rel="noopener">watch video ↗</a>
+            <a class="lk" href="https://www.youtube.com/results?search_query=Technogym+Leg+Press+tutorial" onclick="playVid('leg-press.mp4','https://www.youtube.com/results?search_query=Technogym+Leg+Press+tutorial');return false;">▶ Leg Press</a>
           </div>
         </div>
       </article>
@@ -651,8 +628,7 @@
           <div class="ex-data"><b>3 × 12–15</b> &nbsp;·&nbsp; 2–3s ecc &nbsp;·&nbsp; 60s rest</div>
           
           <div class="ex-links">
-            <a class="lk" href="https://www.google.com/search?tbm=isch&q=cable+lateral+raise+form" target="_blank" rel="noopener">view form ↗</a>
-            <a class="lk" href="https://www.youtube.com/results?search_query=cable+lateral+raise+tutorial" target="_blank" rel="noopener">watch video ↗</a>
+            <a class="lk" href="https://www.youtube.com/results?search_query=cable+lateral+raise+tutorial" onclick="playVid('lateral-raise.mp4','https://www.youtube.com/results?search_query=cable+lateral+raise+tutorial');return false;">▶ Pulley</a>
           </div>
         </div>
       </article>
@@ -665,8 +641,7 @@
           <div class="ex-data"><b>2 × 10–12</b> &nbsp;·&nbsp; 2–3s ecc &nbsp;·&nbsp; 60s rest</div>
           
           <div class="ex-links">
-            <a class="lk" href="https://www.google.com/search?tbm=isch&q=dumbbell+bicep+curl+form" target="_blank" rel="noopener">view form ↗</a>
-            <a class="lk" href="https://www.youtube.com/results?search_query=dumbbell+bicep+curl+tutorial" target="_blank" rel="noopener">watch video ↗</a>
+            <a class="lk" href="https://www.youtube.com/results?search_query=dumbbell+bicep+curl+tutorial" onclick="playVid('biceps-curl.mp4','https://www.youtube.com/results?search_query=dumbbell+bicep+curl+tutorial');return false;">▶ Dumbbells</a>
           </div>
         </div>
       </article>
@@ -679,8 +654,7 @@
           <div class="ex-data"><b>2 × 10–12</b> &nbsp;·&nbsp; 2–3s ecc &nbsp;·&nbsp; 60s rest</div>
           
           <div class="ex-links">
-            <a class="lk" href="https://www.google.com/search?tbm=isch&q=rope+tricep+pushdown+form" target="_blank" rel="noopener">view form ↗</a>
-            <a class="lk" href="https://www.youtube.com/results?search_query=rope+tricep+pushdown+tutorial" target="_blank" rel="noopener">watch video ↗</a>
+            <a class="lk" href="https://www.youtube.com/results?search_query=rope+tricep+pushdown+tutorial" onclick="playVid('triceps-pushdown.mp4','https://www.youtube.com/results?search_query=rope+tricep+pushdown+tutorial');return false;">▶ Pulley</a>
           </div>
         </div>
       </article>
@@ -688,8 +662,20 @@
     </section>
 
   <footer>
-    <p>General training guidance — not medical or nutrition advice. Build loads gradually, keep form clean, stop on any sharp or joint pain, and check with a professional if you have health concerns. Links open a form photo (Google Images) or a tutorial (YouTube).</p>
+    <p>General training guidance — not medical or nutrition advice. Build loads gradually, keep form clean, stop on any sharp or joint pain, and check with a professional if you have health concerns. Each ▶ link names the Technogym machine to use and opens its demo; free-weight moves show the equipment instead.</p>
   </footer>
 </div>
+
+<div id="vmodal" class="vmodal" onclick="if(event.target===this)closeVid()">
+  <div class="vbox">
+    <button class="vclose" onclick="closeVid()" aria-label="Close">✕ Close</button>
+    <video id="vplayer" controls playsinline preload="metadata"></video>
+    <a id="vfallback" class="vfb" target="_blank" rel="noopener">Video not added yet — open on YouTube ↗</a>
+  </div>
+</div>
+<script>
+function playVid(src,fb){var m=document.getElementById('vmodal'),v=document.getElementById('vplayer'),f=document.getElementById('vfallback');f.style.display='none';if(fb){f.href=fb;}v.style.display='block';v.onerror=function(){v.style.display='none';if(fb){f.style.display='block';}};v.src=src;m.style.display='flex';try{v.currentTime=0;}catch(e){}v.play().catch(function(){});}
+function closeVid(){var m=document.getElementById('vmodal'),v=document.getElementById('vplayer');v.pause();v.removeAttribute('src');v.load();v.onerror=null;m.style.display='none';}
+</script>
 </body>
 </html>
